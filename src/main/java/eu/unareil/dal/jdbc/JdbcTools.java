@@ -20,6 +20,7 @@ public class JdbcTools {
             try {
                 conn = DriverManager.getConnection(String.format("jdbc:mariadb://%s:%s/%s?user=%s&password=%s", SERVER, PORT, DB, USER, PASSWORD));
             } catch (SQLException e) {
+                System.out.println("coucou");
                 throw new DALException("Erreur de connexion à la base de données", e.getCause());
             }
         }

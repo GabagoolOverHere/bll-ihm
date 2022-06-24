@@ -1,11 +1,11 @@
 package eu.unareil.bo;
 
 abstract public class Produit {
-    private long refProd;
-    private String marque;
-    private String libelle;
-    private long qteStock;
-    private float prixUnitaire;
+    protected long refProd;
+    protected String marque;
+    protected String libelle;
+    protected long qteStock;
+    protected float prixUnitaire;
 
     public Produit(long refProd, String marque, String libelle, long qteStock, float prixUnitaire) {
         this.refProd = refProd;

@@ -13,9 +13,8 @@ public class Settings {
             properties = new Properties();
 
             try {
-                properties.load(Settings.class.getResourceAsStream("settings.properties"));
+                properties.load(Settings.class.getClassLoader().getResourceAsStream("settings.properties"));
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 throw new DALException("erreur lors du chargement du fichiers contenant les informations de connexion à la base de données");
             }
         }

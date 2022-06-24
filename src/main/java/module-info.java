@@ -1,5 +1,8 @@
-module org.example {
+module eu.unareil.ihm {
     requires javafx.controls;
+    requires javafx.graphics;
     requires java.sql;
-    exports org.example;
+    exports eu.unareil.ihm;
+    exports eu.unareil.bo;
+    exports eu.unareil.dal;
 }
