@@ -14,7 +14,6 @@ public class ProduitTableView extends TableView<Produit> {
     private TableColumn<Produit, String> marqueCol;
     private TableColumn<Produit, Float> prixCol;
     private TableColumn<Produit, Long> qteCol;
-    private TableColumn<Produit, String> typeCol;
     private TableColumn<Produit, LocalDate> dateLimiteConsoCol;
     private TableColumn<Produit, Integer> poidsCol;
     private TableColumn<Produit, String> parfumCol;
@@ -33,7 +32,6 @@ public class ProduitTableView extends TableView<Produit> {
         prixCol.setCellValueFactory(new PropertyValueFactory<>("prixUnitaire"));
         qteCol = new TableColumn<>("Quantite Stock");
         qteCol.setCellValueFactory(new PropertyValueFactory<>("qteStock"));
-        typeCol = new TableColumn<>("Type");
         dateLimiteConsoCol = new TableColumn<>("Date Limite Consommation");
         dateLimiteConsoCol.setCellValueFactory(new PropertyValueFactory<>("dateLimiteConso"));
         poidsCol = new TableColumn<>("Poids");
@@ -47,7 +45,7 @@ public class ProduitTableView extends TableView<Produit> {
         typeCartePostaleCol = new TableColumn<>("Type Carte Postale");
         typeCartePostaleCol.setCellValueFactory(new PropertyValueFactory<>("type"));
 
-        getColumns().addAll(refProdCol, libelleCol, marqueCol, prixCol, qteCol, typeCol, dateLimiteConsoCol, poidsCol, parfumCol, temperatureCol, typeMineCol, typeCartePostaleCol);
+        getColumns().addAll(refProdCol, libelleCol, marqueCol, prixCol, qteCol, dateLimiteConsoCol, poidsCol, parfumCol, temperatureCol, typeMineCol, typeCartePostaleCol);
         setItems(observableList);
     }
 }
